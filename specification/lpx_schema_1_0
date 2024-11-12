@@ -1,42 +1,202 @@
 {
-  "data": {
-    "liveEvents": [
-      {
-        "contentCreated": "2024-02-13T19:46:10.000Z",
-        "copyrightHolder": "Thomson Reuters",
-        "copyrightNotice": "(c) 2024 Thomson Reuters, unless otherwise identified. Full statement available at https://www.thomsonreuters.com/en/policies/copyright.html",
-        "eventDetails": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://lpx.thedpp.com/json/lpx-schema_1_0.json",
+  "title": "DPP LPX - Live Production Exchange - version 1.0",
+  "description": "A schema for exchanging information about live production feeds -- copyright 2024 DPP - www.thedpp.com",
+  "type": "object",
+  "properties": {
+    "liveEvents": {
+      "type": "array",
+      "title": "Live Event Object",
+      "description": "A unique live event",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uri": {
+            "type": "string",
+            "title": "Uniform Resource Identifier",
+            "description": "The global unique identifier",
+            "format": "uri"
+          },
+          "version": {
+            "type": "object",
+            "title": "Version",
+            "description": "Version of the live event"
+          },
+          "versionCreated": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Version Created",
+            "description": "The date and time when this version of the live event was created"
+          },
+          "contentCreated": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Content Created",
+            "description": "The date and time when the live event was created"
+          },
+          "copyrightHolder": {
+            "type": "string",
+            "title": "Copyright Holder",
+            "description": "The person or organisation claiming the intellectual property for the content"
+          },
+          "copyrightNotice": {
+            "type": "string",
+            "title": "Copyright Notice",
+            "description": "Any necessary copyright notice for claiming the intellectual property for the content"
+          },
+          "usageTerms": {
+            "type": "string",
+            "title": "Usage Terms",
+            "description": "Statement about the usage terms pertaining to the content"
+          },
+          "eventDetails": {
+            "type": "object",
+            "title": "Event Details",
+            "description": "A container for properties related to a planned event"
+          },
           "dates": {
-            "duration": "01:01:01",
-            "endDate": "2024-02-14T15:46:06.000Z",
-            "startDate": "2024-02-14T16:48:02.000Z"
+            "type": "object",
+            "title": "Event Dates",
+            "description": "A container for properties related to dates and times for this event",
+            "properties": {
+              "startDate": {
+                "type": "string",
+                "format": "date-time",
+                "title": "Start Date",
+                "description": "Date and optionally time of start of event"
+              },
+              "endDate": {
+                "type": "string",
+                "format": "date-time",
+                "title": "End Date",
+                "description": "Date and optionally time of end of event"
+              },
+              "expectedStartDate": {
+                "type": "string",
+                "title": "Expected Start Date",
+                "description": "Time event is expected/scheduled to start"
+              },
+              "expectedEndDate": {
+                "type": "string",
+                "title": "Expected End Date",
+                "description": "Time event is expected/scheduled to end"
+              },
+              "expectedDuration": {
+                "type": "string",
+                "title": "Expected Duration",
+                "description": "Planned/scheduled duration of live event"
+              }
+            },
+            "required": ["startDate", "endDate"]
+          },
+          "eventStatus": {
+            "type": "string",
+            "enum": ["Canceled", "Scheduled", "Live", "Completed", "Postponed"],
+            "title": "Event Status",
+            "description": "Current status of live event"
+          },
+          "genre": {
+            "type": "object",
+            "title": "Genre",
+            "description": "A container for properties related to genre",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Genre Name",
+                "description": "Description of form of the content"
+              }
+            }
+          },
+          "headline": {
+            "type": "string",
+            "title": "Headline",
+            "description": "Publishable headline for the event"
+          },
+          "language": {
+            "type": "string",
+            "title": "Language",
+            "description": "The human language used by the content (ISO 639-1)"
+          },
+          "location": {
+            "type": "string",
+            "title": "Location",
+            "description": "Place name where event is located"
+          },
+          "slugline": {
+            "type": "string",
+            "title": "Slugline",
+            "description": "A human-readable identifier for the item"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic",
+            "description": "Indicates subject of the event"
+          },
+          "renditions": {
+            "type": "array",
+            "title": "Renditions",
+            "description": "An array of objects, each of which is a rendition of the event",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "title": "Rendition Name",
+                  "description": "Name of the rendition"
+                },
+                "videoCodec": {
+                  "type": "string",
+                  "title": "Video Codec",
+                  "description": "Rendition video codec"
+                },
+                "frameRate": {
+                  "type": "string",
+                  "title": "Frame Rate",
+                  "description": "Rendition frame rate"
+                },
+                "scanType": {
+                  "type": "string",
+                  "title": "Scan Type",
+                  "description": "Rendition scan type"
+                },
+                "aspectRatio": {
+                  "type": "string",
+                  "title": "Aspect Ratio",
+                  "description": "Rendition aspect ratio"
+                },
+                "width": {
+                  "type": "integer",
+                  "title": "Frame Width",
+                  "description": "Rendition frame width"
+                },
+                "height": {
+                  "type": "integer",
+                  "title": "Frame Height",
+                  "description": "Rendition frame height"
+                },
+                "bitrate": {
+                  "type": "string",
+                  "title": "Bitrate",
+                  "description": "Rendition overall bitrate (in kbps)"
+                },
+                "transportProtocol": {
+                  "type": "string",
+                  "title": "Transport Protocol",
+                  "description": "Rendition Transport Protocol"
+                },
+                "url": {
+                  "type": "string",
+                  "title": "Rendition URL",
+                  "description": "URL to access rendition",
+                  "format": "uri"
+                }
+              },
+            }
           }
         },
-        "eventStatus": "postEvent",
-        "genre": "Current or spot news",
-        "headline": "New York's Times Square hosts weddings and surprise proposals as love is in the air on Valentines Day",
-        "language": "en",
-        "location": ["United States"],
-        "previewUrl": "NA",
-        "uri": "ADJWML1G8",
-        "slugline": "VALENTINES-DAY/NEW YORK-WEDDINGS",
-        "topic": [
-          "Arts / Culture / Entertainment"
-        ],
-        "usageTerms": "Restrictions: Broadcast: None, Digital: None",
-        "version": "681326751",
-        "renditions": [
-          {
-            "transportProtocol" : "HLS",
-            "code": "200Kbps-4Mbps Video: 1080p29.97 h.264",
-            "audio": "AAC-LC Stereo CBR",
-            "frameRate": "29.97",
-            "scanType": "progressive",
-            "aspectRatio": "16:9",
-            "frameSize": "1920x1080"
-          }
-        ]
+        "required": ["uri"]
       }
-    ]
-  }
+    }
+  },
 }
