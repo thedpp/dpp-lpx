@@ -1,42 +1,46 @@
 {
-  "data": {
-    "liveEvents": [
-      {
-        "contentCreated": "2024-02-13T19:46:10.000Z",
-        "copyrightHolder": "Thomson Reuters",
-        "copyrightNotice": "(c) 2024 Thomson Reuters, unless otherwise identified. Full statement available at https://www.thomsonreuters.com/en/policies/copyright.html",
-        "eventDetails": {
-          "dates": {
-            "duration": "01:01:01",
-            "endDate": "2024-02-14T15:46:06.000Z",
-            "startDate": "2024-02-14T16:48:02.000Z"
-          }
-        },
-        "eventStatus": "postEvent",
-        "genre": "Current or spot news",
-        "headline": "New York's Times Square hosts weddings and surprise proposals as love is in the air on Valentines Day",
-        "language": "en",
-        "location": ["United States"],
-        "previewUrl": "NA",
-        "uri": "ADJWML1G8",
-        "slugline": "VALENTINES-DAY/NEW YORK-WEDDINGS",
-        "topic": [
-          "Arts / Culture / Entertainment"
-        ],
-        "usageTerms": "Restrictions: Broadcast: None, Digital: None",
+  "data": {
+    "liveEvents": [
+      {
+        "uri": "9767edef-d472-4109-aaa5-1260424bd0d",
         "version": "681326751",
-        "renditions": [
-          {
-            "transportProtocol" : "HLS",
-            "code": "200Kbps-4Mbps Video: 1080p29.97 h.264",
-            "audio": "AAC-LC Stereo CBR",
-            "frameRate": "29.97",
-            "scanType": "progressive",
-            "aspectRatio": "16:9",
-            "frameSize": "1920x1080"
-          }
-        ]
-      }
-    ]
-  }
+        "versionCreated": "2024-02-14T17:55:06.000Z",
+        "contentCreated": "2024-02-13T19:46:10.000Z",
+        "copyrightHolder": "Thomson Reuters",
+        "copyrightNotice": "(c) 2024 Thomson Reuters, unless otherwise identified. Full statement available at https://www.thomsonreuters.com/en/policies/copyright.html",
+        "eventDetails": {
+          "dates": {
+            "endDate": "2024-02-14T15:46:06.000Z",
+            "startDate": "2024-02-14T16:48:02.000Z"
+          }
+        },
+        "eventStatus": "postEvent",
+        "genre": {
+                 "name": "Current or spot news",
+	   },
+        "headline": "New York's Times Square hosts weddings and surprise proposals as love is in the air on Valentines Day",
+        "language": "en",
+        "location": ["United States"],
+        "slugline": "VALENTINES-DAY/NEW YORK-WEDDINGS",
+        "topic": [
+          "Arts / Culture / Entertainment"
+        ],
+        "usageTerms": "Restrictions: Broadcast: None, Digital: None",
+        "version": "681326751",
+        "renditions": [
+          {
+            "name": "200Kbps-4Mbps Video: 1080p29.97 h.264",
+            "videoCodec": "H.264",
+            "frameRate": "29.97",
+            "scanType": "progressive",
+            "aspectRatio": "16:9",
+            "width": "1920",
+            "height": "1080",
+            "transportProtocol" : "HLS",
+            "url": "https://lpx.thedpp.com/videos/streaming/examples/test/main.m3u8"
+          }
+        ]
+      }
+    ]
+  }
 }
