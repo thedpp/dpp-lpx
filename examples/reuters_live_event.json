@@ -1,0 +1,55 @@
+{
+  "data": {
+    "liveEvents": {
+      "events": [
+        {
+		 "contentCreated": "2024-11-15T10:00:00.000Z",
+          "copyrightHolder": "Thomson Reuters",
+          "copyrightNotice": "(c) 2024 Thomson Reuters, unless otherwise identified. Full statement available at https://www.thomsonreuters.com/en/policies/copyright.html",
+          "description": "VALENCIA - Head of Spanish Eastern region of Valencia Carlos Mazon appears before the regional assembly on deadly floods. More than 200 people died after heavy rains on Oct 29 caused waterways to overflow, creating flash floods that surged through suburbs south of the city of Valencia, sweeping away cars and bridges and flooding properties and underground car parks.SCHEDULE:1030GMT - Carlos Mazon appears before the regional assembly",
+          "eventDetails": {
+            "dates": {
+              "endDate": "2024-11-15T12:00:00.000Z",
+              "startDate": "2024-11-15T10:24:49.000Z"
+            },
+            "eventStatus": "MidEvent"
+          },
+          "genre": [
+            {
+              "name": "Current or spot news"
+            },
+            {
+              "code": "N2:ADVS",
+              "name": "Advisories"
+            }
+          ],
+          "headline": "EUROPE-WEATHER/SPAIN-MAZON",
+          "id": "9d550709-b4e0-456c-984f-2fffe5729fca",
+          "language": "en",
+          "located": "Spain",
+          "slugline": "EUROPE-WEATHER/SPAIN-MAZON",
+          "topic": [
+            "Disasters / Accidents"
+          ],
+          "uri": "tag:reuters.com,2024:newsml_ADL0P0OYG",
+          "usageTerms": "BROADCAST: Must not obscure logoDIGITAL: Must not obscure logo",
+          "usn": "ADL0P0OYG",
+          "version": "2",
+          "versionCreated": "2024-11-15T10:24:49.000Z",
+          "renditions": [
+            {
+              "code": "hls:29.97",
+              "name": "200Kbps-4Mbps Video: 1080p29.97 h.264",
+              "frameRate": "29.97",
+              "scanType": "progressive",
+              "aspectRatio": "16:9",
+              "frameSize": "1920x1080",
+              "minBitrate": "200Kbps",
+              "maxBitrate": "4Mbps",
+                    }
+			]
+			}
+		]
+	}
+  }
+}
