@@ -1,0 +1,57 @@
+{
+  "data": {
+    "liveEvents": {
+      "events": [
+        {
+          "contentCreated": "2024-11-01T22:00:00.000Z",
+          "copyrightHolder": "Thomson Reuters",
+          "copyrightNotice": "(c) 2024 Thomson Reuters, unless otherwise identified. Full statement available at https://www.thomsonreuters.com/en/policies/copyright.html",
+          "description": "CARACAS & SANTIAGO - Caracas and Santiago cities enlightened by the last 2024 supermoon.",
+          "eventDetails": {
+            "dates": {
+              "endDate": "2024-11-15T22:00:00.000Z",
+              "startDate": "2024-11-15T21:00:00.000Z"
+            },
+            "eventStatus": "PreEvent"
+          },
+          "genre": [
+            {
+              "name": "Current or spot news"
+            },
+            {
+              "code": "N2:ADVS",
+              "name": "Advisories"
+            }
+          ],
+          "headline": "ADVISORY SUPERMOON-LATAM/",
+          "id": "9474f052-bacf-4bea-a070-90cd52771517",
+          "language": "en",
+          "located": "Venezuela",
+          "slugline": "ADVISORY SUPERMOON-LATAM/",
+          "topic": [
+            "Weather"
+          ],
+          "uri": "tag:reuters.com,2024:newsml_ADL0P2LCO",
+          "usageTerms": "BROADCAST: NoneDIGITAL: None",
+          "usn": "ADL0P2LCO",
+          "version": "1",
+          "versionCreated": "2024-11-14T13:20:06.000Z",
+          "renditions": [
+            {
+              "code": "hls:29.97",
+              "name": "200Kbps-4Mbps Video: 1080p29.97 h.264",
+              "frameRate": "29.97",
+              "scanType": "progressive",
+              "aspectRatio": "16:9",
+              "frameSize": "1920x1080",
+              "minBitrate": "200Kbps",
+              "maxBitrate": "4Mbps",
+              "bitrate": null,
+              "href": null
+            }
+			]
+			}
+		]
+	}
+  }
+}

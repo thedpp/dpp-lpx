@@ -1,0 +1,57 @@
+{
+  "data": {
+    "liveEvents": {
+      "events": [
+        {
+		  "contentCreated": "2024-11-15T04:55:11.000Z",
+          "copyrightHolder": "Thomson Reuters",
+          "copyrightNotice": "(c) 2024 Thomson Reuters, unless otherwise identified. Full statement available at https://www.thomsonreuters.com/en/policies/copyright.html",
+          "description": "THIS LIVE EVENT HAS BEEN CANCELLED DUE TO TECHNICAL REASONS. SEOUL, SOUTH KOREA - South Korea's opposition party leader, Lee Jae-myung, arrives at Seoul Central District Court as the court will rule in trial of Lee on the charges of violating election laws.",
+          "eventDetails": {
+            "dates": {
+              "endDate": "2024-11-15T05:30:00.000Z",
+              "startDate": "2024-11-15T05:00:00.000Z"
+            },
+            "eventStatus": "Canceled"
+          },
+          "genre": [
+            {
+             "name": "Current or spot news"
+            },
+            {
+              "code": "N2:ADVS",
+              "name": "Advisories"
+            }
+          ],
+          "headline": "SOUTHKOREA-POLITICS/CRIME-ARRIVAL",
+          "id": "05c3018c-2783-43c8-8ebe-3de09460c0e4",
+          "language": "en",
+          "located": "South Korea",
+          "slugline": "SOUTHKOREA-POLITICS/CRIME-ARRIVAL",
+          "topic": [
+            "Politics / International Affairs"
+          ],
+          "uri": "tag:reuters.com,2024:newsml_ADL0SN15K",
+          "usageTerms": "BROADCAST: None.DIGITAL: None.",
+          "usn": "ADL0SN15K",
+          "version": "2",
+          "versionCreated": "2024-11-15T04:55:11.000Z",
+          "renditions": [
+            {
+              "code": "hls:29.97",
+              "name": "200Kbps-4Mbps Video: 1080p29.97 h.264",
+              "frameRate": "29.97",
+              "scanType": "progressive",
+              "aspectRatio": "16:9",
+              "frameSize": "1920x1080",
+              "minBitrate": "200Kbps",
+              "maxBitrate": "4Mbps",
+              "bitrate": null,
+              "href": null
+            }
+			]
+			}
+		]
+	}
+}
+}
