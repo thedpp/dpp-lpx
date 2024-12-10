@@ -3,200 +3,138 @@
   "$id": "http://lpx.thedpp.com/json/lpx-schema_1_0.json",
   "title": "DPP LPX - Live Production Exchange - version 1.0",
   "description": "A schema for exchanging information about live production feeds -- copyright 2024 DPP - www.thedpp.com",
-  "type": "object",
-  "properties": {
-    "liveEvents": {
-      "type": "array",
-      "title": "Live Event Object",
-      "description": "A unique live event",
-      "items": {
-        "type": "object",
-        "properties": {
-          "uri": {
-            "type": "string",
-            "title": "Uniform Resource Identifier",
-            "description": "The global unique identifier",
-            "format": "uri"
-          },
-          "version": {
-            "type": "object",
-            "title": "Version",
-            "description": "Version of the live event"
-          },
-          "versionCreated": {
-            "type": "string",
-            "format": "date-time",
-            "title": "Version Created",
-            "description": "The date and time when this version of the live event was created"
-          },
-          "contentCreated": {
-            "type": "string",
-            "format": "date-time",
-            "title": "Content Created",
-            "description": "The date and time when the live event was created"
-          },
-          "copyrightHolder": {
-            "type": "string",
-            "title": "Copyright Holder",
-            "description": "The person or organisation claiming the intellectual property for the content"
-          },
-          "copyrightNotice": {
-            "type": "string",
-            "title": "Copyright Notice",
-            "description": "Any necessary copyright notice for claiming the intellectual property for the content"
-          },
-          "usageTerms": {
-            "type": "string",
-            "title": "Usage Terms",
-            "description": "Statement about the usage terms pertaining to the content"
-          },
-          "eventDetails": {
-            "type": "object",
-            "title": "Event Details",
-            "description": "A container for properties related to a planned event"
-          },
-          "dates": {
-            "type": "object",
-            "title": "Event Dates",
-            "description": "A container for properties related to dates and times for this event",
-            "properties": {
-              "startDate": {
-                "type": "string",
-                "format": "date-time",
-                "title": "Start Date",
-                "description": "Date and optionally time of start of event"
-              },
-              "endDate": {
-                "type": "string",
-                "format": "date-time",
-                "title": "End Date",
-                "description": "Date and optionally time of end of event"
-              },
-              "expectedStartDate": {
-                "type": "string",
-                "title": "Expected Start Date",
-                "description": "Time event is expected/scheduled to start"
-              },
-              "expectedEndDate": {
-                "type": "string",
-                "title": "Expected End Date",
-                "description": "Time event is expected/scheduled to end"
-              },
-              "expectedDuration": {
-                "type": "string",
-                "title": "Expected Duration",
-                "description": "Planned/scheduled duration of live event"
-              }
-            },
-            "required": ["startDate", "endDate"]
-          },
-          "eventStatus": {
-            "type": "string",
-            "enum": ["Canceled", "Scheduled", "Live", "Completed", "Postponed"],
-            "title": "Event Status",
-            "description": "Current status of live event"
-          },
-          "genre": {
-            "type": "object",
-            "title": "Genre",
-            "description": "A container for properties related to genre",
-            "properties": {
-              "name": {
-                "type": "string",
-                "title": "Genre Name",
-                "description": "Description of form of the content"
-              }
-            }
-          },
-          "headline": {
-            "type": "string",
-            "title": "Headline",
-            "description": "Publishable headline for the event"
-          },
-          "language": {
-            "type": "string",
-            "title": "Language",
-            "description": "The human language used by the content (ISO 639-1)"
-          },
-          "location": {
-            "type": "string",
-            "title": "Location",
-            "description": "Place name where event is located"
-          },
-          "slugline": {
-            "type": "string",
-            "title": "Slugline",
-            "description": "A human-readable identifier for the item"
-          },
-          "topic": {
-            "type": "string",
-            "title": "Topic",
-            "description": "Indicates subject of the event"
-          },
-          "renditions": {
-            "type": "array",
-            "title": "Renditions",
-            "description": "An array of objects, each of which is a rendition of the event",
-            "items": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "title": "Rendition Name",
-                  "description": "Name of the rendition"
-                },
-                "videoCodec": {
-                  "type": "string",
-                  "title": "Video Codec",
-                  "description": "Rendition video codec"
-                },
-                "frameRate": {
-                  "type": "string",
-                  "title": "Frame Rate",
-                  "description": "Rendition frame rate"
-                },
-                "scanType": {
-                  "type": "string",
-                  "title": "Scan Type",
-                  "description": "Rendition scan type"
-                },
-                "aspectRatio": {
-                  "type": "string",
-                  "title": "Aspect Ratio",
-                  "description": "Rendition aspect ratio"
-                },
-                "width": {
-                  "type": "integer",
-                  "title": "Frame Width",
-                  "description": "Rendition frame width"
-                },
-                "height": {
-                  "type": "integer",
-                  "title": "Frame Height",
-                  "description": "Rendition frame height"
-                },
-                "bitrate": {
-                  "type": "string",
-                  "title": "Bitrate",
-                  "description": "Rendition overall bitrate (in kbps)"
-                },
-                "transportProtocol": {
-                  "type": "string",
-                  "title": "Transport Protocol",
-                  "description": "Rendition Transport Protocol"
-                },
-                "url": {
-                  "type": "string",
-                  "title": "Rendition URL",
-                  "description": "URL to access rendition",
-                  "format": "uri"
-                }
-              },
-            }
-          }
-        },
-        "required": ["uri"]
-      }
+  "$defs": {
+    "truncatedDateTimeType": {
+      "description": "Allows any of year (xs:gYear, YYYY), year/month (xs:gYearMonth, YYYY-MM), year/month/day (xs:date YYYY-MM-DD), and full datetime (xs:dateTime, YYYY-MM-DDTHH:MM:SS+HH:MM), all with an optional timezone suffix. Note that this does NOT include ISO8601 month of year (xs:gMonth, --MM) or yearly day (xs:gMonthDay, --MM-DD)",
+      "type": "string",
+      "pattern": "^(-?(?:[1-9][0-9]*)?[0-9]{4})(-(1[0-2]|0[1-9])(-(3[01]|0[1-9]|[12][0-9])(T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.[0-9]+)?(Z|[+-](?:2[0-3]|[01][0-9]):[0-5][0-9])?)?)?)?$"
     }
   },
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "liveEvents": {
+          "type": "object",
+          "properties": {
+            "events": {
+              "type": "array",
+              "title": "Live Event Object",
+              "description": "A unique live event",
+              "items": {
+                "type": "object",
+                "additionalProperties": true,
+                "properties": {
+                  "uri": {
+                    "type": "string",
+                    "title": "Uniform Resource Identifier",
+                    "description": "The global unique identifier",
+                    "format": "uri"
+                  },
+                  "id": {
+                    "type": "string",
+                    "title": "Reference ID",
+                    "description": "A user-facing live event ID"
+                  },
+                  "version": {
+                    "type": "string",
+                    "title": "Version",
+                    "description": "Version of the live event"
+                  },
+                  "versionCreated": {
+                    "type": "string",
+                    "format": "date-time",
+                    "title": "Version Created",
+                    "description": "The date and time when this version of the live event was created"
+                  },
+                  "contentCreated": {
+                    "type": "string",
+                    "format": "date-time",
+                    "title": "Content Created",
+                    "description": "The date and time when the live event was created"
+                  },
+                  "copyrightHolder": {
+                    "type": "string",
+                    "title": "Copyright Holder",
+                    "description": "The person or organization claiming the intellectual property for the content"
+                  },
+                  "copyrightNotice": {
+                    "type": "string",
+                    "title": "Copyright Notice",
+                    "description": "Any necessary copyright notice for claiming the intellectual property for the content"
+                  },
+                  "usageTerms": {
+                    "type": "string",
+                    "title": "Usage Terms",
+                    "description": "Statement about the usage terms pertaining to the content"
+                  },
+                  "eventDetails": {
+                    "type": "object",
+                    "title": "Event Details",
+                    "description": "A container for properties related to a planned event",
+                    "additionalProperties": true,
+                    "properties": {
+                      "dates": {
+                        "type": "object",
+                        "title": "Event Dates",
+                        "description": "A container for properties related to dates and times for this event",
+                        "additionalProperties": true,
+                        "properties": {
+                          "startDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "title": "Start Date",
+                            "description": "Date and time of start of event"
+                          },
+                          "endDate": {
+                            "type": "string",
+                            "format": "date-time",
+                            "title": "End Date",
+                            "description": "Date and time of end of event"
+                          },
+                          "expectedStartDate": {
+                            "title": "Expected Start Date",
+                            "description": "Date and optionally time that the event is expected/scheduled to start",
+                            "$ref": "#/$defs/truncatedDateTimeType"
+                          },
+                          "expectedEndDate": {
+                            "title": "Expected End Date",
+                            "description": "Date and optionally time that the event is expected/scheduled to end",
+                            "$ref": "#/$defs/truncatedDateTimeType"
+                          },
+                          "expectedDuration": {
+                            "type": "string",
+                            "title": "Expected Duration",
+                            "description": "Planned/scheduled duration of live event. Must use iCalendar duration format (RFC 5545)."
+                          }
+                        }
+                      },
+                      "eventStatus": {
+                        "type": "string",
+                        "title": "Event Status",
+                        "description": "Current status of live event. Suggested values are from http://cv.iptc.org/newscodes/eventstatus/",
+                      },
+                      "plannedCoverageStatus": {
+                        "type": "string",
+                        "title": "Planned Coverage Status",
+                        "description": "Status of planned coverage. Suggested values are from https://cv.iptc.org/newscodes/newscoveragestatus/",
+                      }
+                    }
+                  },
+                  "headline": {
+                    "type": "string",
+                    "title": "Headline",
+                    "description": "Publishable headline for the event"
+                  }
+                },
+                "required": ["uri"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
