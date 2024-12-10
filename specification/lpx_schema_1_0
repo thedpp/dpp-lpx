@@ -114,12 +114,12 @@
                       "eventStatus": {
                         "type": "string",
                         "title": "Event Status",
-                        "description": "Current status of live event. Suggested values are from http://cv.iptc.org/newscodes/eventstatus/",
+                        "description": "Current status of live event. Suggested values are from https://cv.iptc.org/newscodes/eventstatus/",
                       },
                       "plannedCoverageStatus": {
                         "type": "string",
                         "title": "Planned Coverage Status",
-                        "description": "Status of planned coverage. Suggested values are from https://cv.iptc.org/newscodes/newscoveragestatus/",
+                        "description": "Status of planned coverage. Suggested values are from https://cv.iptc.org/newscodes/eventoccurstatus/",
                       }
                     }
                   },
