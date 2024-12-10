@@ -1,0 +1,49 @@
+{
+  "data": {
+    "liveEvents": {
+      "events": [
+        {
+	  "contentCreated": "2024-11-20T09:00:00.000Z",
+          "copyrightHolder": "DPP",
+          "copyrightNotice": "(c) 2024 DPP",
+          "eventDetails": {
+            "dates": {
+              "startDate": "2024-11-20T09:30:00.000Z",
+              "endDate": "2024-11-20T11:30:00.000Z",
+            },
+            "eventStatus": "Completed"
+          },
+          "genre": [
+            {
+              "name": "Media and Entertainment"
+            },
+          ],
+          "headline": "DPP Leaders' Briefing Day 1",
+          "id": "9d550709-b4e0-456c-984f-2fffe5729fca",
+          "language": "en",
+          "located": "London",
+          "slugline": "Media",
+          "topic": [
+            "Disasters / Accidents"
+          ],
+          "uri": "tag:reuters.com,2024:newsml_ADL0P0OYG",
+          "usageTerms": "Must not obscure logo",
+          "version": "2",
+          "versionCreated": "2024-11-15T10:24:49.000Z",
+          "renditions": [
+            {
+              "code": "hls:25",
+              "name": "2Mbps Video: 1080p25 h.264",
+              "frameRate": "25",
+              "scanType": "progressive",
+              "aspectRatio": "16:9",
+              "frameSize": "1920x1080",
+              "minBitrate": "1500Kbps",
+              "maxBitrate": "4000kbps",
+                    }
+			]
+			}
+		]
+	}
+  }
+}
